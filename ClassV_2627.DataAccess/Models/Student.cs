@@ -8,5 +8,5 @@ public class Student
     public int Age { get; set; }
     public int Grade { get; set; }
     public string Password { get; set; }
-    public string Username { get; set; }
+    public string UserName { get; set; }
 }

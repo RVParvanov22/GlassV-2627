@@ -1,6 +1,7 @@
 using GlassV_2627.Data;
+using GlassV_2627.Services;
+using GlassV_2627.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Scalar.AspNetCore;
 
 namespace GlassV_2627;
 
@@ -22,6 +23,9 @@ public class Program
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
         );
 
+        builder.Services.AddScoped<IStudentService, StudentService>();
+        builder.Services.AddScoped<ITeacherService, TeacherService>();
+
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -31,9 +35,7 @@ public class Program
         }
         
         app.UseRouting();
-       
-        app.MapScalarApiReference();
-        
+
         app.UseHttpsRedirection();
 
         app.UseAuthorization();

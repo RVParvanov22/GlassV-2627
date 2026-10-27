@@ -8,6 +8,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\ClassV_2627.DataAccess\ClassV_2627.DataAccess.csproj" />
+        <ProjectReference Include="..\ClassV_2627.DomainModel\ClassV_2627.DomainModel.csproj" />
+        <ProjectReference Include="..\ClassV_2627.Infrastructure\ClassV_2627.Infrastructure.csproj" />
+        <ProjectReference Include="..\ClassV_2627.Interfaces\ClassV_2627.Interfaces.csproj" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.10"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.12" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.12">
@@ -16,6 +20,10 @@
         </PackageReference>
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.12" />
         <PackageReference Include="Scalar.AspNetCore" Version="2.18.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Services\StudentService.cs‎" />
     </ItemGroup>
 
 </Project>
